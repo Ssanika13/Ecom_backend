@@ -7,6 +7,8 @@ const bottleRouter = require('./Routs/BottleRouter');
 const bagRouter = require('./Routs/BagRouter');
 const jacketRouter = require('./Routs/JacketRouter');
 const shortsRouter = require('./Routs/ShortsRouter');
+const sportsUniformRouter = require('./Routs/SportsUnifromRoute');
+
 
 
 // Load environment variables
@@ -29,6 +31,7 @@ app.use('/bottle',bottleRouter);
 app.use('/bag',bagRouter);
 app.use('/jacket',jacketRouter);
 app.use('/shorts',shortsRouter);
+app.use('/sportsUniform', sportsUniformRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port http://127.0.0.1:${port}`);

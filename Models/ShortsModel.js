@@ -1,8 +1,7 @@
 // models/Shorts.js
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
-const shortsSchema = new Schema({
+const shortsSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'Name is required'],
@@ -38,7 +37,9 @@ const shortsSchema = new Schema({
         type: Number,
         required: [true, 'Stock is required'],
         min: [0, 'Stock cannot be negative']
-    }
-}, { timestamps: true });
+    },
+
+},
+ { timestamps: true });
 
 module.exports = mongoose.model('Shorts', shortsSchema);

@@ -31,7 +31,8 @@ const bottleSchema = new Schema({
         type: Number,
         required: [true, 'Stock is required'],
         min: [0, 'Stock cannot be negative']
-    }
+    },
+
 }, { timestamps: true });
 
 module.exports = mongoose.model('Bottle', bottleSchema);

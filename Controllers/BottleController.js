@@ -33,7 +33,8 @@ exports.createBottle = async (req, res) => {
         capacity,
         colors,
         brand,
-        stock
+        stock,
+        
     });
 
     try {
